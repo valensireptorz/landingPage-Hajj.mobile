@@ -1,0 +1,404 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Custom Navbar</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <style>
+    .navbar-custom {
+      background-color: #3DD4E0;
+      border-radius: 50px;
+      padding:  1rem;
+    }
+    .navbar-brand img {
+      height: 50px; /* Adjust the height of the logo */
+      margin-right: 10px;
+    }
+    .navbar-brand .brand-text {
+      color: white;
+      font-weight: 1000; /* Change text color to white */
+    }
+    .navbar-nav .nav-link {
+      color: white !important;
+      font-weight: bold;
+      padding: 0.25rem 0.5rem; /* Adjust the padding of the links */
+    }
+    .header-image {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 0 0 ; /* Rounded corners only at the bottom */
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+    .img-halaman-about{
+      width: 100%;
+    }
+    .ornament-image{
+      margin-top: -1000px;
+      width: 10%;
+      margin-left: 300px;
+    }
+    .ornament-image-2{
+      margin-top: -1000px;
+      width: 10%;
+      margin-left: 80px;
+    }
+    .img_3{
+      width: 100%;
+    }
+  
+    /* Additional CSS for responsiveness */
+    @media (max-width: 414px) {
+      .navbar-custom {
+        border-radius: 0; /* Remove border-radius on small screens */
+      }
+      .navbar-brand img {
+        height: 25px; /* Adjust logo height on smaller screens */
+      }
+      .navbar-brand img{
+        height: auto;
+      }
+      .ornament-image {
+        width: 10%;
+        height: auto;
+        margin-top: -485px;
+        margin-left: 120px;
+      }
+      .ornament-image-2 {
+        width: 10%;
+        height: auto;
+        margin-top: -485px;
+        margin-left: 80px;
+      }
+      .img_2_1{
+        width: 40%;
+        margin-top: -920px;
+        margin-left: 120px;
+      }
+      .halaman-haji1{
+        font-size: 20px;
+        margin-top: -550px;
+        margin-left: 170px;
+      }
+      .halaman-mabrur1{
+        font-size: 20px;
+      margin-left: 150px;
+       
+      }
+      .halaman-perjalanan1{
+       margin-left: 148px;
+       font-size: 10px;
+       color: rgb(255, 255, 255);
+       line-height: 1.5;
+       margin-top: 15px;
+      }
+      .halaman-selamat1{
+        color: #3DD4E0;
+        margin-top: 40px;
+        margin-left: 140px;
+        font-size: 10px;
+        font-weight: bold;
+      }
+      .halaman-selamat2{
+        color: #3DD4E0;
+        margin-top: -10px;
+        margin-left: 165px;
+        font-size: 10px;
+        font-weight: bold;
+      }
+      .halaman-awali1{
+        color: white;
+        font-size: 5px;
+        margin-left: 155px;
+      }
+      .halaman-awali2{
+        color: white;
+        font-size: 5px;
+        margin-left: 195px;
+        margin-top: -5px;
+      }
+      .halaman-awali3{
+        color: white;
+        font-size: 5px;
+        margin-left: 150px;
+        margin-top: -5px;
+      }
+      .halaman-awali4{
+        color: white;
+        font-size: 5px;
+        margin-left: 195px;
+        margin-top: -5px;
+      }
+      .halaman-awali5 {
+      background-color: #61E7F9;
+      color: #0D5B8D;
+      border: none; 
+      border-radius: 50px;
+      padding: 1px 20px; 
+      font-size: 10px; 
+      font-weight: bold;
+      font-family: 'Poppins', sans-serif; 
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+      cursor: pointer; 
+      margin-left: 155px;
+      transition: background-color 0.3s, transform 0.3s; 
+    }
+    .halaman-awali5:hover {
+      background-color: #4EC4D9; 
+      transform: translateY(-2px); 
+    }
+    .img_3{
+        width:100%;
+       margin-top: 320px;
+      }
+      .img-bingkai{
+        width: 100px;
+        margin-top: -1000px;
+        margin-left: 55px;
+      }
+      .halaman-haji2{
+        font-size: 10px;
+        margin-top: -520px;
+        margin-left: 89px;
+        color: #EAE6D5;
+      }
+      .teks-elv{
+        color: #EAE6D5;
+        font-size: 5px;
+        margin-left: 90px;
+        margin-top: -5px;
+      }
+      .teks-suci{
+        color: #EAE6D5;
+        font-size: 15px;
+        margin-left: 260px;
+      }
+      .teks-suci2{
+        color: #EAE6D5;
+        font-size: 15px;
+        margin-left: 292px;
+        margin-top: -9px;
+      }
+      .teks-kami{
+        font-size: 6px;
+        margin-left: 245px;
+        margin-top: 20px;
+      }
+      .teks-kami2{
+        font-size: 6px;
+        margin-left: 265px;
+        margin-top: -5px;
+      }
+      .teks-kami3{
+        font-size: 6px;
+        margin-left: 245px;
+        margin-top: -5px;
+      }
+      .teks-kami4{
+        font-size: 6px;
+        margin-left: 290px;
+        margin-top: -5px;
+      }
+      .teks-kami5{
+        font-size: 6px;
+        margin-left: 270px;
+        margin-top: -5px;
+      }
+      .teks-haji{
+        margin-top: 120px;
+        margin-left: 270px;
+      }
+    .img-orna-1{
+      width: 30px;
+      margin-left: 235px;
+      margin-top: -100px;
+      }
+      .img-orna-2{
+      width: 30px;
+      margin-left: 75px;
+      margin-top: -100px;
+      }
+      .teks-elv3{
+        color: #0D5B8D;
+        margin-left: 240px;
+        margin-top: -35px;
+      }
+      .img_2_2{
+        width: 200px;
+        margin-left: 210px;
+        margin-top: -15px;
+      }
+      .teks-suci3{
+       font-size: 13px;
+       margin-left: 240px;
+       margin-top: -35px;
+       color: white;
+        
+      }
+      .teks-3-1{
+        font-size: 7px;
+        margin-left: 210px;
+        font-weight: bolder;
+       margin-top: 25px;
+      }
+      .teks-3-2{
+        font-size: 7px;
+        margin-left: 215px;
+        font-weight: bolder;
+        margin-top: -5px;
+      }
+      .teks-3-3{
+        font-size: 7px;
+        margin-left: 215px;
+        font-weight: bolder;
+        margin-top: -5px;
+      }
+      .teks-3-4{
+        font-size: 7px;
+        margin-left: 210px;
+        font-weight: bolder;
+        margin-top: -5px;
+        
+      }
+      .teks-3-5{
+        font-size: 7px;
+        margin-left: 210px;
+        font-weight: bolder;
+        margin-left: 280px;
+        margin-top: -5px;
+      }
+      .teks-apk{
+        color: white;
+        font-size: 4px;
+        margin-top: 65px;
+        margin-left: 25px;
+      }
+      .teks-apk-2{
+        color: white;
+        font-size: 4px;
+        margin-top: -8px;
+        margin-left: 25px;
+      }
+      .teks-apk-3{
+        color: rgb(255, 255, 255);
+        font-size: 4px;
+        margin-top: -8px;
+        margin-left: 25px;
+      }
+      .btn-unduh-1 {
+      margin-left: 295px;
+      margin-top: -50px; 
+      padding: 1px 15px; 
+      background-color: #61E7F9; 
+      color: #0D5B8D; 
+      border: none; 
+      border-radius: 50px; 
+      font-size: 8px; 
+      font-weight: bold;
+      font-family: 'Poppins', sans-serif;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+      cursor: pointer; 
+      transition: background-color 0.3s, transform 0.3s; 
+    }
+    .btn-unduh-1:hover {
+      background-color: #4EC4D9; 
+      transform: translateY(-2px); 
+    }
+    .button-container {
+      margin-top: -35px; 
+    }
+      
+    }
+      /* CSS font to Poppins */
+      h2 {
+      font-family: 'Poppins', sans-serif;
+      font-weight: bold;
+    }
+    h3 {
+      font-family: 'Poppins', sans-serif;
+      color: rgb(37, 47, 158);
+      font-weight: bold;
+    }
+    h5 {
+      font-family: 'Poppins', sans-serif;
+      color: rgb(255, 255, 255);
+      font-weight: bold;
+      
+    }
+    h6{
+      font-family: 'Poppins', sans-serif;
+    }
+   
+  </style>
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-custom">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">
+        <img src="public/images/img_ilustrasi_vekto.png" alt="Logo" width="45">
+        <span class="brand-text">Hajj Elev</span>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <div class="navbar-nav ms-auto">
+          <a class="nav-link active" aria-current="page" href="#">Home</a>
+          <a class="nav-link" href="#">About</a>
+          <a class="nav-link" href="#">Unduh Apk</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+  <!-- Add your fullscreen image below the navbar -->
+  <img src="public/images/img_group_2.png" alt="Header Image" class="header-image">
+  <!-- Different classes for each ornament image -->
+  <img src="public/images/img_asset_ornament_1.png" alt="Ornament Image 1" class="ornament-image">
+  <img src="public/images/img_asset_ornament_1.png" alt="Ornament Image 2" class="ornament-image-2">
+  <img src="public/images/img_2_halaman_about.png" alt="2_halaman_about" class="img-halaman-about">
+  <img src="public/images/img_asset_2_1.png" alt="img_asset_2_1" class="img_2_1">
+  <h2 class="halaman-haji1">H A J I</h2>  
+  <h3 class="halaman-mabrur1">M A B R U R</h3>
+  <h5 class="halaman-perjalanan1">Perjalanan yang suci</h5>
+  <h6 class="halaman-selamat1">SELAMAT DATANG DI APLIKASI</h6>
+  <h6 class="halaman-selamat2">PANDUAN HAJI KAMI</h6>
+  <h6 class="halaman-awali1">Awali perjalanan suci ibadah haji anda dengan</h6>
+  <h6 class="halaman-awali2">panduan</h6>
+  <h6 class="halaman-awali3">lengkap dari aplikasi kami yang mudah digunakan</h6>
+  <h6 class="halaman-awali4">dan informatif</h6>
+  <button class="halaman-awali5">Mulai Jelajahi</button>
+  <img src="public/images/img_3_halaman_unduh.png" alt="img_asset_3" class="img_3">
+  <img src="public/images/img_asset_bingkai_1.png" alt="img_bingkai" class="img-bingkai">
+  <h2 class="halaman-haji2">H A J I</h2>
+  <h2 class="teks-elv">E L E V A T E</h2>
+  <h2 class="teks-suci">PERJALANAN</h2>
+  <h2 class="teks-suci2">SUCI</h2>
+  <h5 class="teks-kami">Kami telah merancang sebuah Aplikasi Haji</h5>
+  <h5 class="teks-kami2">Elevate, panduan khusus untuk</h5>
+  <h5 class="teks-kami3">jamaah haji yang nantinya bisa memberikan</h5>
+  <h5 class="teks-kami4">kemudahan</h5>
+  <h5 class="teks-kami5">dalam perjalanan suci Anda.</h5>
+  <h2 class="teks-haji">H A J I</h2>
+  <img src="public/images/img_asset_ornament_1.png" alt="img_orna" class="img-orna-1">
+  <img src="public/images/img_asset_ornament_1.png" alt="img_orna2" class="img-orna-2">
+ <h2 class="teks-elv3">E L E V A T E</h2>
+ <img src="public/images/img_asset_2_1.png" alt="" class="img_2_2">
+ <h3 class="teks-suci3">Perjalanan yang suci</h3>
+ <div class="text-container">
+ <h6 class="teks-3-1">kami menyediakan sebuah aplikasi yang beroperasi</h6>
+ <h6 class="teks-3-2">dalam dua bahasa untuk mendukung kebutuhan</h6>
+ <h6 class="teks-3-3">jamaah haji, dan kami juga menawarkan beragam</h6>
+ <h6 class="teks-3-4">pilihan menu yang lengkap untuk panduan haji yang</h6>
+ <h6 class="teks-3-5">komprehensif.</h6>
+ <h6 class="teks-apk">Aplikasi panduan haji dengan fitur</h6>
+ <h6 class="teks-apk-2">terlengkap, mencakup larangan,</h6>
+ <h6 class="teks-apk-3">tata cara, dan doa-doa dll.</h6>
+</div>
+<div class="button-container">
+  <button class="btn-unduh-1" alt="btn_unduh">Unduh Apk disini</button>
+</div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>
